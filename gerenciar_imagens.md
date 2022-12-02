@@ -4,7 +4,7 @@ Encontre aqui os passos necessários para gerenciar imagens dos felinos na TheCa
 
 ## Visão Geral
 
-Aprenda como manter seu repositório realizando a gestão das imagens dos felinos no repositório. Saiba como:
+Aprenda a manter e realizar a gestão das imagens dos felinos no repositório. Saiba como:
 
 - Adicionar uma nova imagem ao repositório;
 - Buscar uma imagem adicionada;
@@ -15,12 +15,12 @@ Aprenda como manter seu repositório realizando a gestão das imagens dos felino
 
 ### 1. Adicionar uma nova imagem ao repositório
 
-Para adicionar uma nova imagem ao repositório você deve ter uma biblioteca de imagens disponíveis para upload. 
+Para adicionar uma nova imagem ao repositório, você deve ter uma biblioteca de imagens disponíveis para upload. 
 
 
 #### 1.1 Requisição 
 
-Utilize o endpoint `POST images/upload` para criar um registro de uma nova imagem, com o corpo da requisição contendo a imagem, por exemplo:
+Utilize o endpoint `POST images/upload` para criar um registro de uma nova imagem, com o corpo da requisição contendo a imagem. Por exemplo:
 
 **Request body**
 
@@ -42,8 +42,8 @@ curl
 
 #### 1.2 Resposta
 
-Após adicionar a imagem escolhida da sua biblioteca em seu repositório.
-A resposta de código  `200 OK` indica que a imagem já está disponível no repositório TheCatAPI.
+Após adicionar a imagem escolhida da sua biblioteca em seu repositório, você terá uma reposta da API.
+Se aparecer o código  `200 OK`, indica que a imagem já está disponível no repositório TheCatAPI.
 
 ```json
 {
@@ -56,18 +56,19 @@ A resposta de código  `200 OK` indica que a imagem já está disponível no rep
     "approved": 1
 }
 ```
-Para buscar a imagem no repositório siga o passo abaixo.
+
+Para buscar a imagem no repositório, siga o passo abaixo.
 
 
 ### 2. Buscar imagem recém adicionada por ID
 
-Siga os passos abaixo para encontrar uma imagem que adicionada ao repositório pelo `ID`.
+Siga os passos abaixo para encontrar uma imagem que foi adicionada ao repositório pelo parâmetro `ID`.
 
 #### 2.1 Requisição
 
-Utilize o endpoint  `GET /images/{image_id}` para buscar uma imagem.
+Utilize o endpoint  `GET /images/{image_id}` para buscar uma imagem. 
 
-Obtém a imagem correspondente ao parâmetro `image_id` passado como parâmetro `path`.
+O resultado esperado é que você obtenha a imagem correspondente ao parâmetro `image_id` passado como parâmetro `path`.
 
 
 Neste exemplo, o parâmetro `image_id` utilizado é o mesmo encontrado na resposta do passo anterior: `GET /images/AfysaoY_W`
